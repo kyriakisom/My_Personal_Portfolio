@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Clinic Management System",
+    "imageSrc": "/projects/medilife.png",
+    "description": "The topic of the current project is the design and implementation of a web application for the management of a medical practice. In particular, the application allows the management of patients' information, their history and their appointments with the doctor. The application is usable by patients, the secretaries of the practice and the doctor.",
+    "skills": ["HTML5","CSS3", "Express", "Node.js","MongoDB"],
+    "source": "https://github.com/kyriakisom/clinic_management"},
+  {
+    "title": "Conference Management System",
+    "imageSrc": "/projects/conference.png",
+    "description": "The project involves creating a backend conference management system with RESTful web services that connect to a database for managing conference-related entities. Key functionalities include handling conferences and managing papers (manuscripts) submitted to these conferences.",
+    "skills": ["Node.js", "Express","MongoDB"],
+    "source": "https://github.com/kyriakisom/conference_management"
+  },
+ 
+  {
+    "title": "Customer Management System",
+    "imageSrc": "/projects/customer.png",
+    "description": "Customer Management System is a lightweight, containerized .NET Core API for managing customer data. It exposes RESTful endpoints to create, update, and retrieve customer information. The project is designed for easy deployment using Docker and Kubernetes, making it suitable for scalable and cloud-native environments.",
+    "skills": ["C#","MongoDB"],
+    "source": "https://github.com/kyriakisom/customer_management_system"
+  },
+   {
+    "title": "Grade Management System",
+    "imageSrc": "/projects/database.png",
+    "description": "Responsive and feature-rich website for a university department, supporting three user roles: admin, instructor, and student. Built with HTML5, CSS, JavaScript, PHP, and Bootstrap, with a MySQL database for backend operations. Includes functionality for user management, grade tracking, and multilingual support.",
+    "skills": ["PHP", "SQL", "HTML5", "CSS3"],
+    "source": "https://github.com/kyriakisom/grade_management_system"
+  },
+  {
+    "title": "Currency Calculator",
+    "imageSrc": "/projects/calculator.png",
+    "description": "A currency calculator for worldwide currencies.",
+    "skills": ["Node.js","Express","MongoDB","Vue.js"],
+    "source": "https://github.com/kyriakisom/currency_calculator_app"
+  },
+   {
+    "title": "My portfolio",
+    "imageSrc": "/projects/portfolio.png",
+    "description": "My personal website, using react!",
+    "skills": ["HTML5","CSS3","React","Node.js"],
+    "source": "https://github.com/kyriakisom/My-portfolio"
+  }
+  
+
+]
+

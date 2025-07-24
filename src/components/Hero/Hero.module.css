@@ -1,0 +1,136 @@
+@import "../../vars.css";
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 110px; /* 🔽 Αυξήθηκε για να κατέβει */
+  z-index: 1;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-text);
+  z-index: 1;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 900;
+  margin-bottom: 33px;
+  font-family: var(--font-roboto);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(255, 255, 255, 0) 120%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.description {
+  font-size: 20px;
+  font-family: var(--font-roboto);
+  margin-bottom: 52px;
+}
+
+.contactBtn {
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border-radius: 100px;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 17px 26px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+.contactBtn:hover {
+  background-color: #b94fff; /* πιο ανοιχτό λιλά */
+  color: #fff;
+  box-shadow: 0 0 12px 3px rgba(107, 79, 255, 0.7);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  transform: translateY(-3px);
+}
+
+.heroImg {
+  height: 400px; /* 🔼 Αυξήθηκε το ύψος */
+  width: auto; /* Αυτόματο πλάτος για να μην παραμορφωθεί */
+  z-index: 1;
+
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+.topBlur {
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  min-width: 350px;
+  min-width: 350px;
+  top: -128px;
+  left: -10vw;
+  border-radius: 764px;
+  background: rgba(25, 55, 109, 0.7);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.bottomBlur {
+  position: absolute;
+  width: 70vw;
+  height: 50vw;
+  min-width: 350px;
+  min-width: 250px;
+  top: 246px;
+  right: -25vw;
+  border-radius: 764px;
+  background: rgba(25, 55, 109, 0.7);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .content {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 830px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .content {
+    align-items: center;
+    margin-top: 30px; /* 🔽 Κατεβάζει το κείμενο πιο κάτω από την εικόνα */
+  }
+
+  .heroImg {
+    height: 250px; /* 🔽 Πιο μικρή εικόνα για mobile */
+    width: auto;
+    margin-top: 20px;
+  }
+}

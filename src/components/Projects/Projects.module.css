@@ -1,0 +1,105 @@
+.container {
+  margin-top: 76px;
+  color: #4b148c; /* deep lilac */
+  margin-left: 10%;
+  margin-right: 10%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  font-size: 44px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background: linear-gradient(90deg,  #ffffff, #93d5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  padding-left: 20px;
+  display: inline-block;
+  transition: all 0.5s ease-in-out;
+  text-shadow: 0 0 10px #b186ff88;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 80%;
+  background: linear-gradient(180deg,  #ffffff, #93d5ff);
+  border-radius: 3px;
+}
+
+.title:hover {
+  text-shadow: 0 0 18px #d7b6ffcc;
+}
+
+/* Swiper style overrides */
+.swiper {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background: #f7f0ff; /* very light lilac */
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(90, 45, 140, 0.15);
+  overflow: hidden;
+  height: 460px;
+}
+
+/* Βελτιωμένα βελάκια πλοήγησης */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #7b4dff;
+  width: 44px;
+  height: 44px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: rgba(123, 77, 255, 0.15);
+  box-shadow: 0 0 8px rgba(123, 77, 255, 0.25);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 28px;
+  font-weight: 700;
+  color: #7b4dff;
+  text-shadow: 0 0 6px rgba(123, 77, 255, 0.9);
+  transition: color 0.3s ease;
+}
+
+/* Hover effect στα βελάκια */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(123, 77, 255, 0.4);
+  box-shadow: 0 0 20px rgba(123, 77, 255, 0.7);
+  transform: translateY(-50%) scale(1.15);
+}
+
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  color: #d7b6ff;
+  text-shadow: 0 0 12px #d7b6ff;
+}
+
+/* Κουκίδες pagination */
+.swiper-pagination-bullet {
+  background-color: #bda1ff; /* Ανοιχτό μωβ */
+  opacity: 1;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #7b4dff; /* Σκούρο μωβ */
+  box-shadow: 0 0 8px #7b4dff;
+}

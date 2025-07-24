@@ -1,0 +1,133 @@
+.container {
+  width: 90%;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 24px;
+}
+.accordionItem {
+  margin-bottom: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordionHeader {
+  width: 100%;
+  padding: 8px 12px;
+  background: linear-gradient(90deg, #a55eea, #a436b7);
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.accordionHeader:hover {
+  background: linear-gradient(90deg, #8e44ad, #a55eea);
+}
+/* Icon */
+.icon {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px; /* ⬅️ Αυξημένο */
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+
+.skill {
+  width: 70px;
+  text-align: center;
+}
+
+.skillImageContainer {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 4px;
+}
+
+.skillImageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.skill p {
+  font-size: 12px;
+  margin: 0;
+  color: white;
+}
+
+.skill:hover {
+  transform: scale(1.1);
+}
+
+
+/* Image Container */
+.skillImageContainer {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.skill:hover .skillImageContainer {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.skillImageContainer img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+/* Skill Text */
+.skill p {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .skill {
+    width: 90px;
+    padding: 12px;
+  }
+
+  .skillImageContainer {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skill p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .accordionHeader {
+    font-size: 1.1rem;
+    padding: 16px;
+  }
+
+  .icon {
+    font-size: 1.4rem;
+  }
+}

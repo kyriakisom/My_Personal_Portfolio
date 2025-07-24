@@ -1,0 +1,156 @@
+@import "../../vars.css";
+
+/* Container: Improved Alignment */
+.container {
+  position: relative;
+  padding: 40px 5%; /* λιγότερο padding */
+  margin-top: 50px;
+  text-align: left;
+  z-index: 1;
+}
+
+/* Τίτλος ΜΕΓΑΛΟΣ όπως είναι (δεν τον αγγίζουμε) */
+.title {
+  font-size: 44px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 0px 4px 15px rgba(255, 255, 255, 0.4);
+  background: linear-gradient(90deg, #ffffff, #93d5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  padding-left: 20px;
+  display: inline-block;
+}
+
+/* Left Border Effect */
+.title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 80%;
+  background: linear-gradient(180deg, #93d5ff, #ffffff);
+  border-radius: 3px;
+}
+
+/* Title Hover Glow Effect */
+.title:hover {
+  text-shadow: 0px 6px 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Centered Hobby Items */
+.aboutItems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px; /* μικρότερο gap */
+  color: var(--color-text);
+  margin-top: 25px; /* λιγότερο margin */
+}
+
+/* Stunning Glassmorphism Cards */
+.aboutItem {
+  display: flex;
+  align-items: center;
+  width: 70%; /* πιο στενό */
+  padding: 12px 20px; /* μικρότερο padding */
+  border-radius: 30px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+}
+
+/* Hover Glow Effect */
+.aboutItem::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(165, 215, 232, 0.3), rgba(255, 255, 255, 0.08));
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.aboutItem:hover::before {
+  opacity: 1;
+}
+
+.aboutItem:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* Floating Image Effect */
+.aboutItem img {
+  width: 45px;
+  height: auto;
+  margin-right: 12px;
+  border-radius: 10px;
+  transition: transform 0.4s ease, filter 0.3s ease-in-out;
+}
+
+.aboutItem:hover img {
+  transform: rotate(6deg) scale(1.1);
+  filter: brightness(1.15);
+}
+
+/* Typography Refinements */
+.aboutItem h3 {
+  font-size: 18px; /* μικρότερο font */
+  font-weight: 700;
+  margin-bottom: 4px;
+  background: linear-gradient(90deg, #ffffff, #93d5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: color 0.3s ease-in-out;
+}
+
+.aboutItem p {
+  font-size: 14px; /* μικρότερο font */
+  line-height: 1.4;
+  opacity: 0.85;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Responsive & Adaptive */
+@media screen and (max-width: 830px) {
+  .container {
+    padding: 30px 8%;
+  }
+
+  .aboutItems {
+    gap: 18px;
+  }
+
+  .aboutItem {
+    width: 90%;
+    padding: 16px;
+    border-radius: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutItem img {
+    margin-bottom: 10px;
+    margin-right: 0;
+    width: 38px;
+  }
+
+  .aboutItem h3 {
+    font-size: 16px;
+  }
+
+  .aboutItem p {
+    font-size: 13px;
+  }
+}

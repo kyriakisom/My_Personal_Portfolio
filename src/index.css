@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #a64dff;
+  width: 60px;           /* από 44px σε 60px */
+  height: 60px;          /* από 44px σε 60px */
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: rgba(123, 77, 255, 0.15);
+  box-shadow: 0 0 8px rgba(123, 77, 255, 0.25);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 36px;       /* από 28px σε 36px */
+  font-weight: 700;
+  color: #301142;
+  text-shadow: 0 0 6px rgba(123, 77, 255, 0.9);
+  transition: color 0.3s ease;
+}
+
+/* Hover effect στα βελάκια */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(123, 77, 255, 0.4);
+  box-shadow: 0 0 25px rgba(123, 77, 255, 0.7);
+  transform: translateY(-50%) scale(1.2); /* λίγο πιο έντονο scale */
+}
+
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  color: #d7b6ff;
+  text-shadow: 0 0 16px #d7b6ff;
+}
+.swiper-button-prev {
+  left: -8px;    /* 20px από αριστερά */
+}
+
+.swiper-button-next {
+  right: -8px;   /* 20px από δεξιά */
+}
+
+
+/* Κουκίδες pagination */
+.swiper-pagination-bullet {
+  background-color: #bda1ff; /* Ανοιχτό μωβ */
+  opacity: 1;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #7b4dff; /* Σκούρο μωβ */
+  box-shadow: 0 0 8px #7b4dff;
+}

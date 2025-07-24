@@ -1,0 +1,197 @@
+.projectCard {
+  background: rgba(200, 180, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(110, 70, 180, 0.2);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease,
+    background-color 0.35s ease;
+  cursor: pointer;
+  margin: 30px;
+
+  display: flex;
+  flex-direction: column;
+  height: 450px; /* Σταθερό ύψος για όλες τις κάρτες */
+}
+
+.projectCard:hover,
+.projectCard:focus-within {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(110, 70, 180, 0.4);
+  background: rgba(200, 180, 255, 0.3);
+  outline: none;
+}
+
+.projectImageWrapper {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  flex-shrink: 0;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease-in-out;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+.projectCard:hover .projectImage {
+  transform: scale(1.07);
+}
+
+.projectContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 18px;
+  text-align: center;
+  color: #4b148c;
+  background: rgba(230, 220, 255, 0.6);
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.projectTitle {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: #6a1b9a;
+  text-shadow: 1px 1px 3px rgba(106, 27, 154, 0.6);
+}
+.showDescriptionButton {
+  background: linear-gradient(135deg, #b59eff, #e0cfff);
+  color: #4b148c;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(123, 77, 255, 0.3);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.showDescriptionButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #ffffff44, #ffebff33);
+  transition: all 0.6s ease-in-out;
+}
+
+.showDescriptionButton:hover::before {
+  left: 100%;
+}
+
+.showDescriptionButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(123, 77, 255, 0.5);
+  color: #320c5b;
+}
+
+/* Skills buttons */
+.projectSkills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 12px;
+}
+.projectSkill {
+  display: inline-block;
+  margin: 4px 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #7b1fa2; /* 🔥 Πιο σκούρο χρώμα */
+  background: linear-gradient(135deg, #ecc3f6, #d293ff);
+  box-shadow: 0 2px 8px rgba(100, 50, 200, 0.25);
+  transition: transform 0.2s ease;
+}
+
+
+.projectSkill:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(100, 50, 200, 0.35);
+}
+
+.projectLinks {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 14px;
+}
+
+.projectButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(145deg, #4b148c, #6a1fbf);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 28px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(75, 20, 140, 0.3);
+}
+
+.projectButton:hover {
+  background: linear-gradient(145deg, #3a0f6a, #5e1aa5);
+  box-shadow: 0 6px 20px rgba(75, 20, 140, 0.5);
+  transform: translateY(-1px);
+}
+@media (max-width: 768px) {
+  .projectCard {
+    height: auto;
+    margin: 16px auto;
+    max-width: 90%;
+  }
+
+  .projectImageWrapper {
+    height: 180px;
+  }
+
+  .projectContent {
+    padding: 14px;
+  }
+
+  .projectTitle {
+    font-size: 20px;
+  }
+
+  .showDescriptionButton {
+    font-size: 15px;
+    padding: 8px 20px;
+  }
+
+  .projectSkill {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+
+  .projectLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .projectButton {
+    font-size: 13px;
+    padding: 9px 16px;
+  }
+}
